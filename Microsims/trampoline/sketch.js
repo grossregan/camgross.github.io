@@ -23,19 +23,6 @@ function setup() {
   let sliderOffsetY = canvasY + canvas.height + 20; // 20px below the canvas
   let labelOffsetY = sliderOffsetY - 20;           // Labels appear just above sliders
 
-  // Initialize sliders
-  weightSlider = createSlider(40, 120, 70); // kg
-  weightSlider.position(canvasX + 20, sliderOffsetY); // Adjusted position
-  weightSlider.style('width', '120px');
-
-  forceSlider = createSlider(0, 100, 50); // percent
-  forceSlider.position(canvasX + 160, sliderOffsetY); // Adjusted position
-  forceSlider.style('width', '120px');
-
-  gravitySlider = createSlider(1.6, 9.8, 3.7, 0.1); // Moon to Earth gravity
-  gravitySlider.position(canvasX + 300, sliderOffsetY); // Adjusted position
-  gravitySlider.style('width', '120px');
-
   // Create labels
   weightLabel = createDiv('Weight:');
   weightLabel.position(canvasX + 20, labelOffsetY); // Adjusted position
@@ -53,6 +40,19 @@ function setup() {
 
   // Initialize jumper
   jumper = new Jumper();
+
+   // Initialize sliders
+  weightSlider = createSlider(40, 120, 70); // kg
+  weightSlider.position(canvasX + 20, sliderOffsetY); // Adjusted position
+  weightSlider.style('width', '120px');
+
+  forceSlider = createSlider(0, 100, 50); // percent
+  forceSlider.position(canvasX + 160, sliderOffsetY); // Adjusted position
+  forceSlider.style('width', '120px');
+
+  gravitySlider = createSlider(1.6, 9.8, 3.7, 0.1); // Moon to Earth gravity
+  gravitySlider.position(canvasX + 300, sliderOffsetY); // Adjusted position
+  gravitySlider.style('width', '120px');
 }
 
 function toggleUnits() {
